@@ -1,0 +1,23 @@
+{
+	"name": "urlittle.alexgalhardo.com",
+	"scripts": {
+		"dev": "bun run --watch src/server.ts",
+		"format": "prettier --write \"src/**/*.ts\"",
+		"build": "bun build --compile --minify ./src/server.ts --outfile server"
+	},
+	"prisma": {
+		"seed": "ts-node --transpile-only --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+	},
+	"dependencies": {
+		"fastify": "^4.27.0",
+		"@prisma/client": "^5.14.0"
+	},
+	"devDependencies": {
+		"bun-types": "latest",
+		"husky": "^9.0.11",
+		"prettier": "^3.2.5",
+		"prisma": "^5.14.0",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.4.5"
+	}
+}
